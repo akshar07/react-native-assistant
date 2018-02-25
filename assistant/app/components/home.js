@@ -7,7 +7,7 @@ var {
     ActivityIndicator,
     Button
 } = require('react-native');
-import {Login} from "./Login"
+import Login from "./Login"
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
  
