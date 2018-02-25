@@ -23,3 +23,14 @@ export function changeData(){
  
     };
 }
+
+
+export function saveProfile(user){
+    console.log(user)
+    /*return (dispatch)=>{
+        dispatch({
+            type:'SAVE_USER_PROFILE',
+            data:user
+        });
+    }*/
+}

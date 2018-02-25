@@ -7,11 +7,12 @@ import {
   Image,
   Linking
 } from 'react-native';
+import { connect } from 'react-redux';
+import * as Actions from '../actions';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SafariView from 'react-native-safari-view';
-
-
-export default class Login extends Component {
+class Login extends Component {
   state = {
     user: undefined, // user has not logged in yet
   };
@@ -37,10 +38,13 @@ export default class Login extends Component {
       // Decode the user string and parse it into JSON
       user: JSON.parse(decodeURI(user_string))
     });
+    this.props.saveProfile(JSON.parse(decodeURI(user_string)));
+
     if (Platform.OS === 'ios') {
       SafariView.dismiss();
     }
   };
+
   loginWithFacebook = () => this.openURL('https://winterproject.herokuapp.com/auth/facebook');
   openURL = (url) => {
     // Use SafariView on iOS
@@ -107,6 +111,20 @@ export default class Login extends Component {
     );
   }
 }
+ 
+ 
+function mapStateToProps(state, props) {
+    return {
+        loading: state.dataReducer.loading,
+        data: state.dataReducer.data
+    }
+}
+
+//Connect everything
+export default connect(mapStateToProps, {
+    saveUserProfile: Actions.saveProfile,
+})(Login);
+
 
 const iconStyles = {
   borderRadius: 10,

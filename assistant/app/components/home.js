@@ -7,7 +7,7 @@ var {
     ActivityIndicator,
     Button
 } = require('react-native');
- 
+import {Login} from "./Login"
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
  
@@ -38,30 +38,33 @@ class Home extends Component {
     }
  
     render() {
-        if (this.props.loading) {
-            return (
-                <View style={styles.activityIndicatorContainer}>
-                    <ActivityIndicator
-                        animating={true}
-                        style={[{height: 80}]}
-                        size="small"
-                    />
-                </View>
-            );
-        } else {
-            return (
-                <View>
-                    <Text style={styles.title}>
-                        hello welcome + {this.props.data}
-                    </Text> 
-                    <Button
-                    onPress={this.handleChange}
-                    title="Change"
-                    color="#841584"
-                    />
-            </View> 
-            );
-        }
+        return (
+            <Login />
+        )
+        // if (this.props.loading) {
+        //     return (
+        //         <View style={styles.activityIndicatorContainer}>
+        //             <ActivityIndicator
+        //                 animating={true}
+        //                 style={[{height: 80}]}
+        //                 size="small"
+        //             />
+        //         </View>
+        //     );
+        // } else {
+        //     return (
+        //         <View>
+        //             <Text style={styles.title}>
+        //                 hello welcome + {this.props.data}
+        //             </Text> 
+        //             <Button
+        //             onPress={this.handleChange}
+        //             title="Change"
+        //             color="#841584"
+        //             />
+        //     </View> 
+        //     );
+        // }
     }
  
     renderRow(rowData, sectionID, rowID) {
@@ -76,10 +79,6 @@ class Home extends Component {
 };
  
  
- 
-// The function takes data from the app current state,
-// and insert/links it into the props of our component.
-// This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
     return {
         loading: state.dataReducer.loading,
@@ -87,9 +86,6 @@ function mapStateToProps(state, props) {
     }
 }
  
-// Doing this merges our actions into the component’s props,
-// while wrapping them in dispatch() so that they immediately dispatch an Action.
-// Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(Actions, dispatch);
 }
