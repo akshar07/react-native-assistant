@@ -23,7 +23,7 @@ class Home extends Component {
  
     componentWillMount() {
         this.props.getData();
-        console.log(this.props.data)
+        //console.log(this.props.data)
         this.setState({
             data:this.props.data
         })
@@ -31,7 +31,7 @@ class Home extends Component {
 
     handleChange = () => {
         this.props.changeData();
-        console.log(this.props.data)
+        //console.log(this.props.data)
         this.setState({
             data:this.props.data
         })

@@ -38,7 +38,7 @@ class Login extends Component {
       // Decode the user string and parse it into JSON
       user: JSON.parse(decodeURI(user_string))
     });
-    this.props.saveProfile(JSON.parse(decodeURI(user_string)));
+    this.props.saveUserProfile(JSON.parse(decodeURI(user_string)));
 
     if (Platform.OS === 'ios') {
       SafariView.dismiss();
