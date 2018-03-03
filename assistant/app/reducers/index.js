@@ -9,6 +9,10 @@ const dataReducer = (state = dataState, action) => {
             state = Object.assign({}, state, { data: action.data, loading:false });
             //console.log(state);
             return state;
+        case 'SAVE_USER_PROFILE':
+            state = Object.assign({}, state, { userProfile: action.data, loading:false });
+            //console.log(state);
+            return state;
         default:
             return state;
     }

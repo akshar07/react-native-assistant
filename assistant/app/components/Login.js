@@ -43,6 +43,7 @@ class Login extends Component {
     if (Platform.OS === 'ios') {
       SafariView.dismiss();
     }
+    console.log(this.props)
   };
 
   loginWithFacebook = () => this.openURL('https://winterproject.herokuapp.com/auth/facebook');
@@ -116,7 +117,8 @@ class Login extends Component {
 function mapStateToProps(state, props) {
     return {
         loading: state.dataReducer.loading,
-        data: state.dataReducer.data
+        data: state.dataReducer.data,
+        userProfile:state.dataReducer.userProfile,
     }
 }
 
