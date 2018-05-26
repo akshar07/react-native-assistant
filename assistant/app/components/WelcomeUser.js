@@ -5,8 +5,10 @@ var {
     View,
     Text,
     ActivityIndicator,
+    TouchableHighlight,
     Button
 } = require('react-native');
+
 import Login from "./Login"
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
@@ -16,8 +18,17 @@ import * as Actions from '../actions';
 class WelcomeUser extends Component {
     render(){
         return (
-            <View style={styles.container}>
-                <Text>{this.props.userProfile.name}</Text>
+            <View style={[styles.container,styles.content]}>
+                {this.props.userProfile && 
+                  <View>
+                    <Text style={styles.text}>Mr/Mrs {this.props.userProfile.name}, we are happy to be your day starter, where we can provide
+                     you with news based on your preferences, weather for your work, current location, your to do list, trending things, search 
+                     all at one place.</Text>
+                  </View>
+                }
+                <TouchableHighlight style={styles.buttons}>
+                  <Text style={styles.textColor}>Click to continue -></Text>
+                </TouchableHighlight>
             </View>
         )
     }
@@ -35,11 +46,19 @@ export default connect(mapStateToProps, {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      margin:30,
+      marginTop:0,
+      padding:10,
       backgroundColor: '#FFF',
+      borderColor: '#eff0f1',
+      shadowColor: '#000',
+      shadowOffset: {width: 0, height: 2},
+      shadowOpacity: 0.5,
+      shadowRadius: 2,
+      borderWidth: 1,
+      borderRadius:10,
     },
     content: {
-      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -57,15 +76,22 @@ const styles = StyleSheet.create({
       margin: 10,
     },
     text: {
-      textAlign: 'center',
+      textAlign: 'justify',
       color: '#333',
-      marginBottom: 5,
+      padding:2,
+      letterSpacing:0.2,
+      fontWeight: 'bold',
     },
     buttons: {
       justifyContent: 'space-between',
       flexDirection: 'row',
       margin: 20,
-      marginBottom: 30,
+      padding: 12,
+      borderRadius: 15,
+      backgroundColor:'#5fd3a1',
     },
+    textColor:{
+      color:'white',
+    }
   });
   

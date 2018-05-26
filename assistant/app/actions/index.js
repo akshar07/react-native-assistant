@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const data = [1,2,3,4,5]
 export function getData(){
     return (dispatch) => {
@@ -26,11 +28,40 @@ export function changeData(){
 
 
 export function saveProfile(user){
-    console.log(user)
+    console.log(user);
     return (dispatch)=>{
-        dispatch({
-            type:'SAVE_USER_PROFILE',
-            data:user
+        axios.post('https://morning-beyond-27964.herokuapp.com/api/saveUser', {
+            User: user
+        })
+        .then(function (response) { 
+            console.log(response);
+            return dispatch({
+                type:'SAVE_USER_PROFILE',
+                data:user
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
         });
+        
+    }
+    
+}
+
+export function getUserProfile(userId){
+    return (dispatch)=>{
+        axios.get('https://morning-beyond-27964.herokuapp.com/api/getuser?userId='+userId)
+        .then(function (response) { 
+            console.log("in action")
+            console.log(response);
+            return dispatch({
+                type:'GET_USER_PROFILE',
+                data:response.data,
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        
     }
 }
