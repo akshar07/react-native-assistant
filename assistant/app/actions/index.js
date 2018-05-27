@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const data = [1,2,3,4,5]
 export function getData(){
     return (dispatch) => {
@@ -26,7 +28,6 @@ export function changeData(){
 
 
 export function saveProfile(user){
-<<<<<<< HEAD
     console.log(user);
     return (dispatch)=>{
         axios.post('https://morning-beyond-27964.herokuapp.com/api/saveUser', {
@@ -57,13 +58,7 @@ export function getUserProfile(userId){
         })
         .catch(function (error) {
             console.log(error);
-=======
-    console.log(user)
-    return (dispatch)=>{
-        dispatch({
-            type:'SAVE_USER_PROFILE',
-            data:user
->>>>>>> parent of 08813f8... login flow
         });
+        
     }
 }
