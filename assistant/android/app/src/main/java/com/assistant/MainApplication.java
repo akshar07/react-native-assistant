@@ -3,6 +3,18 @@ package com.assistant;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -27,6 +39,18 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
+            new VectorIconsPackage(),
+            new FBSDKPackage(),
             new FBSDKPackage(),
             new FBSDKPackage(),
             new VectorIconsPackage(),

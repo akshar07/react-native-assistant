@@ -5,8 +5,7 @@ var {
     View,
     Text,
     ActivityIndicator,
-    TouchableHighlight,
-    Button
+    TouchableHighlight
 } = require('react-native');
 
 import Login from "./Login"
@@ -17,6 +16,8 @@ import * as Actions from '../actions';
  
 class WelcomeUser extends Component {
     render(){
+      console.log("welcome")
+      console.log(this.props);
         return (
             <View style={[styles.container,styles.content]}>
                 {this.props.userProfile && 
@@ -26,7 +27,7 @@ class WelcomeUser extends Component {
                      all at one place.</Text>
                   </View>
                 }
-                <TouchableHighlight style={styles.buttons}>
+                <TouchableHighlight style={styles.buttons} onPress={() => this.props.navigation.navigate('Setup')}>
                   <Text style={styles.textColor}>Click to continue -></Text>
                 </TouchableHighlight>
             </View>

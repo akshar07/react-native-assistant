@@ -25,9 +25,7 @@ class Login extends Component {
   }
 
   checkLoggedIn = () => {
-    console.log("here");
     AsyncStorage.getItem('userId').then((value) => {
-      console.log(value)
       if(value !== null){
         this.setState({loggedIn:true})
          this.props.getUserProfile(value);//.then((response) => {
@@ -48,6 +46,8 @@ class Login extends Component {
   }
 
   render() {
+    console.log("login")
+    console.log(this.props);
     return (
       <View style={styles.body}>
        <View style={styles.container}>
@@ -81,7 +81,7 @@ class Login extends Component {
             onLogoutFinished={() => alert("User logged out")}/>
           </View>
         }
-        {this.state.loggedIn && <WelcomeUser/>} 
+        {this.state.loggedIn && <WelcomeUser navigation={this.props.navigation}/>} 
       </View>
     )
   }
@@ -110,7 +110,7 @@ const iconStyles = {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop:'40%',
+    marginTop:'20%',
     margin:30,
     padding:10,
     backgroundColor: '#FFF',

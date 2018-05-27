@@ -34,7 +34,6 @@ export function saveProfile(user){
             User: user
         })
         .then(function (response) { 
-            console.log(response);
             return dispatch({
                 type:'SAVE_USER_PROFILE',
                 data:user
@@ -52,8 +51,6 @@ export function getUserProfile(userId){
     return (dispatch)=>{
         axios.get('https://morning-beyond-27964.herokuapp.com/api/getuser?userId='+userId)
         .then(function (response) { 
-            console.log("in action")
-            console.log(response);
             return dispatch({
                 type:'GET_USER_PROFILE',
                 data:response.data,
