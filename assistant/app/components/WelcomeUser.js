@@ -5,12 +5,9 @@ var {
     View,
     Text,
     ActivityIndicator,
-<<<<<<< HEAD
     TouchableHighlight
-=======
-    Button
->>>>>>> parent of 08813f8... login flow
 } = require('react-native');
+
 import Login from "./Login"
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
@@ -22,7 +19,6 @@ class WelcomeUser extends Component {
       console.log("welcome")
       console.log(this.props);
         return (
-<<<<<<< HEAD
             <View style={[styles.container,styles.content]}>
                 {this.props.userProfile && 
                   <View>
@@ -34,10 +30,6 @@ class WelcomeUser extends Component {
                 <TouchableHighlight style={styles.buttons} onPress={() => this.props.navigation.navigate('Setup')}>
                   <Text style={styles.textColor}>Click to continue -></Text>
                 </TouchableHighlight>
-=======
-            <View style={styles.container}>
-                <Text>{this.props.userProfile.name}</Text>
->>>>>>> parent of 08813f8... login flow
             </View>
         )
     }
@@ -55,11 +47,19 @@ export default connect(mapStateToProps, {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      margin:30,
+      marginTop:0,
+      padding:10,
       backgroundColor: '#FFF',
+      borderColor: '#eff0f1',
+      shadowColor: '#000',
+      shadowOffset: {width: 0, height: 2},
+      shadowOpacity: 0.5,
+      shadowRadius: 2,
+      borderWidth: 1,
+      borderRadius:10,
     },
     content: {
-      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -77,15 +77,22 @@ const styles = StyleSheet.create({
       margin: 10,
     },
     text: {
-      textAlign: 'center',
+      textAlign: 'justify',
       color: '#333',
-      marginBottom: 5,
+      padding:2,
+      letterSpacing:0.2,
+      fontWeight: 'bold',
     },
     buttons: {
       justifyContent: 'space-between',
       flexDirection: 'row',
       margin: 20,
-      marginBottom: 30,
+      padding: 12,
+      borderRadius: 15,
+      backgroundColor:'#5fd3a1',
     },
+    textColor:{
+      color:'white',
+    }
   });
   
