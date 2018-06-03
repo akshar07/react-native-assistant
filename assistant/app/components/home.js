@@ -6,22 +6,22 @@ var {
     Text,
     ActivityIndicator
 } = require('react-native');
-import Login from "./Login"
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 import HomeScreen from './HomeScreen';
+import NewsPref from './NewsPref';
 import Login from './Login';
- 
 import * as Actions from '../actions';
  
 class Home extends Component {
     render() {
-        console.log("home")
-        console.log(this.props);
+        //console.log("home")
+        //console.log(this.props);
         // <Login navigation={this.props.navigation}/>
+        //<HomeScreen navigation={this.props.navigation}/>
+        //  <NewsPref navigation={this.props.navigation}/>
         return (
-           
-            <Login navigation={this.props.navigation}/>
+          <HomeScreen navigation={this.props.navigation}/>
         )
     }
 };

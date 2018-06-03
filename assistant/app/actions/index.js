@@ -48,11 +48,13 @@ export function saveProfile(user){
 }
 
 export function getUserProfile(userId){
+    //console.log("getting profile");
+    //console.log(userId)
     return (dispatch)=>{
         axios.get('https://morning-beyond-27964.herokuapp.com/api/getuser?userId='+userId)
         .then(function (response) { 
             return dispatch({
-                type:'GET_USER_PROFILE',
+                type:'SAVE_USER_PROFILE',
                 data:response.data,
             });
         })
@@ -61,4 +63,52 @@ export function getUserProfile(userId){
         });
         
     }
+}
+
+export function saveNewsPref(userId,newsPref){
+    console.log(newsPref);
+    return (dispatch)=>{
+        axios.post('https://morning-beyond-27964.herokuapp.com/api/saveNewsPref', {
+            userId: userId,
+            newsPref:newsPref
+        })
+        .then(function (response) { 
+            console.log(response);
+            return dispatch({
+                type:'SAVE_USER_PROFILE',
+                data:response.data,
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        
+    }
+}
+
+export function getNews(newsPref){
+    let news = [];
+    //console.log(newsPref);
+    return (dispatch)=>{
+        for(let i = 0; i < newsPref.length; i++)
+        {
+            axios.get('https://newsapi.org/v2/top-headlines?country=us&category='+ newsPref[i]+'&apiKey=b3142eb925a04b3fa19f8b0af442e065')
+            .then(function (response) { 
+                news.push(response.data.articles);
+                if(i + 1 === newsPref.length){
+                    console.log(news);
+                   return dispatch({
+                    type:'SAVE_NEWS;',
+                    data:news,
+                }); 
+                }
+                
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+        
+    }
+    
 }
