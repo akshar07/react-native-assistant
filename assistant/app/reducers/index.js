@@ -18,7 +18,14 @@ const dataReducer = (state = dataState, action) => {
             });
             return state;
         case "SAVE_NEWS":
-            state = Object.assign({}, state, { news: action.data });
+            state = Object.assign({}, state, {
+                news: action.data
+            });
+            return state;
+        case "SAVE_SEARCH_NEWS":
+            state = Object.assign({}, state, {
+                searchNews: action.data
+            });
             return state;
         default:
             return state;

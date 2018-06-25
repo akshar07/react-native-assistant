@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import { View, StyleSheet, Image, Text, AsyncStorage } from "react-native";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import * as Actions from "../actions";
@@ -9,6 +9,10 @@ import BottomNavigation, {
 } from "react-native-material-bottom-navigation";
 import Icon from "react-native-vector-icons/FontAwesome";
 import News from "./News";
+import HomeTab from "./HomeTab";
+import NewsPref from "./NewsPref";
+import Search from "./Search";
+//import ThingTranslator from "./ThingTranslator";
 
 class Home extends Component {
   tabs = [
@@ -43,7 +47,25 @@ class Home extends Component {
   ];
 
   state = {
-    activeTab: this.tabs[0]
+    activeTab: this.tabs[0],
+    news: "",
+  };
+
+  componentWillMount = () => {
+    this.getNews();
+  };
+
+  getNews = () => {
+    //let news = ["business", "entertainment"];
+    AsyncStorage.getItem("NewsPref").then(value => {
+      if (value != null) {
+        let temp = value.split("||");
+        this.setState({news:temp});
+        this.props.getNews(temp);
+      } else {
+        this.props.getNews(news);
+      }
+    });
   };
 
   renderIcon = icon => ({ isActive }) => (
@@ -64,11 +86,11 @@ class Home extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: "white" }}>
-        <View style={{ flex: 1, justifyContent: "flex-end" }}>
-          {this.state.activeTab.key === "News" && <News />}
-          {this.state.activeTab.key === "Home" && <Text>Home</Text>}
-          {this.state.activeTab.key === "Search" && <Text>SEARCH</Text>}
-          {this.state.activeTab.key === "Settings" && <Text>SETTINGS</Text>}
+        <View style={{ flex: 1 }}>
+          {this.state.activeTab.key === "News" && <News newsCat={this.state.news} />}
+          {this.state.activeTab.key === "Home" && <HomeTab />}
+          {this.state.activeTab.key === "Search" && <Search />}
+          {this.state.activeTab.key === "Settings" && <NewsPref fromtab={true} />}
         </View>
         <BottomNavigation
           onTabPress={activeTab => this.setState({ activeTab })}

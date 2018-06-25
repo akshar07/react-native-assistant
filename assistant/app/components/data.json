@@ -1,0 +1,364 @@
+[
+    {
+        "trends": [
+            {
+                "name": "#DockerCon",
+                "url": "http://twitter.com/search?q=%23DockerCon",
+                "promoted_content": null,
+                "query": "%23DockerCon",
+                "tweet_volume": null
+            },
+            {
+                "name": "#VelocityConf",
+                "url": "http://twitter.com/search?q=%23VelocityConf",
+                "promoted_content": null,
+                "query": "%23VelocityConf",
+                "tweet_volume": null
+            },
+            {
+                "name": "#WednesdayWisdom",
+                "url": "http://twitter.com/search?q=%23WednesdayWisdom",
+                "promoted_content": null,
+                "query": "%23WednesdayWisdom",
+                "tweet_volume": 116548
+            },
+            {
+                "name": "#FathersDay",
+                "url": "http://twitter.com/search?q=%23FathersDay",
+                "promoted_content": null,
+                "query": "%23FathersDay",
+                "tweet_volume": 39848
+            },
+            {
+                "name": "#WorldCup",
+                "url": "http://twitter.com/search?q=%23WorldCup",
+                "promoted_content": null,
+                "query": "%23WorldCup",
+                "tweet_volume": 257378
+            },
+            {
+                "name": "Michael Cohen",
+                "url": "http://twitter.com/search?q=%22Michael+Cohen%22",
+                "promoted_content": null,
+                "query": "%22Michael+Cohen%22",
+                "tweet_volume": 105900
+            },
+            {
+                "name": "Peter Budaj",
+                "url": "http://twitter.com/search?q=%22Peter+Budaj%22",
+                "promoted_content": null,
+                "query": "%22Peter+Budaj%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Mike Soroka",
+                "url": "http://twitter.com/search?q=%22Mike+Soroka%22",
+                "promoted_content": null,
+                "query": "%22Mike+Soroka%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Jamie Foxx",
+                "url": "http://twitter.com/search?q=%22Jamie+Foxx%22",
+                "promoted_content": null,
+                "query": "%22Jamie+Foxx%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Tiffany Haddish",
+                "url": "http://twitter.com/search?q=%22Tiffany+Haddish%22",
+                "promoted_content": null,
+                "query": "%22Tiffany+Haddish%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Jose Bautista",
+                "url": "http://twitter.com/search?q=%22Jose+Bautista%22",
+                "promoted_content": null,
+                "query": "%22Jose+Bautista%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Got Friends",
+                "url": "http://twitter.com/search?q=%22Got+Friends%22",
+                "promoted_content": null,
+                "query": "%22Got+Friends%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Opportunity",
+                "url": "http://twitter.com/search?q=Opportunity",
+                "promoted_content": null,
+                "query": "Opportunity",
+                "tweet_volume": 198942
+            },
+            {
+                "name": "Jerry Blevins",
+                "url": "http://twitter.com/search?q=%22Jerry+Blevins%22",
+                "promoted_content": null,
+                "query": "%22Jerry+Blevins%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Federal Reserve",
+                "url": "http://twitter.com/search?q=%22Federal+Reserve%22",
+                "promoted_content": null,
+                "query": "%22Federal+Reserve%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Gabrielle Hamilton",
+                "url": "http://twitter.com/search?q=%22Gabrielle+Hamilton%22",
+                "promoted_content": null,
+                "query": "%22Gabrielle+Hamilton%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Rachel Bloom",
+                "url": "http://twitter.com/search?q=%22Rachel+Bloom%22",
+                "promoted_content": null,
+                "query": "%22Rachel+Bloom%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Tim Russert",
+                "url": "http://twitter.com/search?q=%22Tim+Russert%22",
+                "promoted_content": null,
+                "query": "%22Tim+Russert%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "The NCAA",
+                "url": "http://twitter.com/search?q=%22The+NCAA%22",
+                "promoted_content": null,
+                "query": "%22The+NCAA%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "The Fed",
+                "url": "http://twitter.com/search?q=%22The+Fed%22",
+                "promoted_content": null,
+                "query": "%22The+Fed%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "Aidan Robbins",
+                "url": "http://twitter.com/search?q=%22Aidan+Robbins%22",
+                "promoted_content": null,
+                "query": "%22Aidan+Robbins%22",
+                "tweet_volume": null
+            },
+            {
+                "name": "#MPRaccoon",
+                "url": "http://twitter.com/search?q=%23MPRaccoon",
+                "promoted_content": null,
+                "query": "%23MPRaccoon",
+                "tweet_volume": 16020
+            },
+            {
+                "name": "#CNX18",
+                "url": "http://twitter.com/search?q=%23CNX18",
+                "promoted_content": null,
+                "query": "%23CNX18",
+                "tweet_volume": null
+            },
+            {
+                "name": "#WarriorsParade",
+                "url": "http://twitter.com/search?q=%23WarriorsParade",
+                "promoted_content": null,
+                "query": "%23WarriorsParade",
+                "tweet_volume": 33601
+            },
+            {
+                "name": "#DanceToThis",
+                "url": "http://twitter.com/search?q=%23DanceToThis",
+                "promoted_content": null,
+                "query": "%23DanceToThis",
+                "tweet_volume": 71261
+            },
+            {
+                "name": "#UnitedWayChat",
+                "url": "http://twitter.com/search?q=%23UnitedWayChat",
+                "promoted_content": null,
+                "query": "%23UnitedWayChat",
+                "tweet_volume": null
+            },
+            {
+                "name": "#IAmIncredibly",
+                "url": "http://twitter.com/search?q=%23IAmIncredibly",
+                "promoted_content": null,
+                "query": "%23IAmIncredibly",
+                "tweet_volume": null
+            },
+            {
+                "name": "#Dumbo",
+                "url": "http://twitter.com/search?q=%23Dumbo",
+                "promoted_content": null,
+                "query": "%23Dumbo",
+                "tweet_volume": 70720
+            },
+            {
+                "name": "#TeenChoice",
+                "url": "http://twitter.com/search?q=%23TeenChoice",
+                "promoted_content": null,
+                "query": "%23TeenChoice",
+                "tweet_volume": 115624
+            },
+            {
+                "name": "#WW84",
+                "url": "http://twitter.com/search?q=%23WW84",
+                "promoted_content": null,
+                "query": "%23WW84",
+                "tweet_volume": 46881
+            },
+            {
+                "name": "#kbtribechat",
+                "url": "http://twitter.com/search?q=%23kbtribechat",
+                "promoted_content": null,
+                "query": "%23kbtribechat",
+                "tweet_volume": null
+            },
+            {
+                "name": "#WeThePeople18",
+                "url": "http://twitter.com/search?q=%23WeThePeople18",
+                "promoted_content": null,
+                "query": "%23WeThePeople18",
+                "tweet_volume": null
+            },
+            {
+                "name": "#SadAmusementParkRides",
+                "url": "http://twitter.com/search?q=%23SadAmusementParkRides",
+                "promoted_content": null,
+                "query": "%23SadAmusementParkRides",
+                "tweet_volume": null
+            },
+            {
+                "name": "#asktroye",
+                "url": "http://twitter.com/search?q=%23asktroye",
+                "promoted_content": null,
+                "query": "%23asktroye",
+                "tweet_volume": null
+            },
+            {
+                "name": "#NAREE18",
+                "url": "http://twitter.com/search?q=%23NAREE18",
+                "promoted_content": null,
+                "query": "%23NAREE18",
+                "tweet_volume": null
+            },
+            {
+                "name": "#USCCB18",
+                "url": "http://twitter.com/search?q=%23USCCB18",
+                "promoted_content": null,
+                "query": "%23USCCB18",
+                "tweet_volume": null
+            },
+            {
+                "name": "#FOMC",
+                "url": "http://twitter.com/search?q=%23FOMC",
+                "promoted_content": null,
+                "query": "%23FOMC",
+                "tweet_volume": null
+            },
+            {
+                "name": "#InterActionForum",
+                "url": "http://twitter.com/search?q=%23InterActionForum",
+                "promoted_content": null,
+                "query": "%23InterActionForum",
+                "tweet_volume": null
+            },
+            {
+                "name": "#IAmAFusionOf",
+                "url": "http://twitter.com/search?q=%23IAmAFusionOf",
+                "promoted_content": null,
+                "query": "%23IAmAFusionOf",
+                "tweet_volume": null
+            },
+            {
+                "name": "#WellnessWed",
+                "url": "http://twitter.com/search?q=%23WellnessWed",
+                "promoted_content": null,
+                "query": "%23WellnessWed",
+                "tweet_volume": null
+            },
+            {
+                "name": "#CorpCitizenshipAwards",
+                "url": "http://twitter.com/search?q=%23CorpCitizenshipAwards",
+                "promoted_content": null,
+                "query": "%23CorpCitizenshipAwards",
+                "tweet_volume": null
+            },
+            {
+                "name": "#winniesun",
+                "url": "http://twitter.com/search?q=%23winniesun",
+                "promoted_content": null,
+                "query": "%23winniesun",
+                "tweet_volume": null
+            },
+            {
+                "name": "#ExpediaChat",
+                "url": "http://twitter.com/search?q=%23ExpediaChat",
+                "promoted_content": null,
+                "query": "%23ExpediaChat",
+                "tweet_volume": null
+            },
+            {
+                "name": "#1linewed",
+                "url": "http://twitter.com/search?q=%231linewed",
+                "promoted_content": null,
+                "query": "%231linewed",
+                "tweet_volume": null
+            },
+            {
+                "name": "#ValueOurFamilies",
+                "url": "http://twitter.com/search?q=%23ValueOurFamilies",
+                "promoted_content": null,
+                "query": "%23ValueOurFamilies",
+                "tweet_volume": null
+            },
+            {
+                "name": "#AbortoLegalYa",
+                "url": "http://twitter.com/search?q=%23AbortoLegalYa",
+                "promoted_content": null,
+                "query": "%23AbortoLegalYa",
+                "tweet_volume": 146673
+            },
+            {
+                "name": "#truthontrial",
+                "url": "http://twitter.com/search?q=%23truthontrial",
+                "promoted_content": null,
+                "query": "%23truthontrial",
+                "tweet_volume": null
+            },
+            {
+                "name": "#OOR18",
+                "url": "http://twitter.com/search?q=%23OOR18",
+                "promoted_content": null,
+                "query": "%23OOR18",
+                "tweet_volume": null
+            },
+            {
+                "name": "#JFFHorizons",
+                "url": "http://twitter.com/search?q=%23JFFHorizons",
+                "promoted_content": null,
+                "query": "%23JFFHorizons",
+                "tweet_volume": null
+            },
+            {
+                "name": "#LookCloser",
+                "url": "http://twitter.com/search?q=%23LookCloser",
+                "promoted_content": null,
+                "query": "%23LookCloser",
+                "tweet_volume": null
+            }
+        ],
+        "as_of": "2018-06-13T18:34:52Z",
+        "created_at": "2018-06-13T18:29:06Z",
+        "locations": [
+            {
+                "name": "San Francisco",
+                "woeid": 2487956
+            }
+        ]
+    }
+]

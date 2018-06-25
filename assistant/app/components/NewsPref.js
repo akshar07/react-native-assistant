@@ -7,9 +7,10 @@ var {
   ActivityIndicator,
   TouchableHighlight,
   Picker,
-  Button
+  Button,
+  AsyncStorage
 } = require("react-native");
-import { WeatherWidget } from "react-native-weather";
+
 
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -53,16 +54,19 @@ class NewsPref extends Component {
   };
 
   saveNewsPref = () => {
-    //console.log(this.props);
+    let temp = this.state.categories;
+    AsyncStorage.setItem("NewsPref", temp.join("||"));
     this.props.saveNewsPref(
       this.props.userProfile.userId,
       this.state.categories
     );
-    this.props.navigation.navigate("HomeScreen");
+    if(!this.props.fromtab){
+      this.props.navigation.navigate("HomeScreen");
+    }
+    
   };
 
   render() {
-    //console.log(this.state.categories)
     let categories = [
       "business",
       "entertainment",
@@ -98,11 +102,7 @@ class NewsPref extends Component {
             {buttons}
           </View>
         </View>
-        <WeatherWidget
-          api={"db8db5734ecd596de552d5eb50eac8a6"}
-          lat={"37.3537"}
-          lng={"-122.0307"}
-        />
+        
         <TouchableHighlight
           style={styles.doneButton}
           onPress={this.saveNewsPref}

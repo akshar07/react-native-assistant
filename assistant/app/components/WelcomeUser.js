@@ -17,11 +17,16 @@ import * as Actions from "../actions";
 
 class WelcomeUser extends Component {
   state = {
-    profile: {}
+    profile: {},
+    prefDone:false,
   };
 
   componentWillMount = () => {
     this.checkLoggedIn();
+  };
+
+  trendingtopics = () => {
+    
   };
 
   checkLoggedIn = () => {
@@ -32,6 +37,13 @@ class WelcomeUser extends Component {
           //console.log(response);
           this.setState({ profile: response });
         });
+      }
+    });
+    AsyncStorage.getItem("NewsPref").then(value => {
+      console.log(value);
+      if (value !== null) {
+        //console.log("value " + value)
+        this.setState({prefDone:true});
       }
     });
   };
@@ -53,7 +65,7 @@ class WelcomeUser extends Component {
         )}
         <TouchableHighlight
           style={styles.buttons}
-          onPress={() => this.props.navigation.navigate("Setup")}
+          onPress={() => this.state.prefDone? this.props.navigation.navigate("HomeScreen") : this.props.navigation.navigate("Setup")}
         >
           <Text style={styles.textColor}>Click to continue -></Text>
         </TouchableHighlight>
@@ -87,7 +99,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 2,
     borderWidth: 1,
-    borderRadius: 10
+    borderRadius: 10,
   },
   content: {
     justifyContent: "center",

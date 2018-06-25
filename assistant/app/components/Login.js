@@ -35,8 +35,6 @@ class Login extends Component {
     AsyncStorage.getItem("userId").then(value => {
       if (value !== null) {
         this.setState({ loggedIn: true });
-        //this.props.getUserProfile(value);//.then((response) => {
-        // });
       }
     });
   };
@@ -47,12 +45,11 @@ class Login extends Component {
     } else {
       this.props.saveUserProfile(result);
       AsyncStorage.setItem("userId", result.id);
+      this.setState({ loggedIn: true });
     }
   };
 
   render() {
-    //console.log("login")
-    //console.log(this.props);
     return (
       <View style={styles.body}>
         <View style={styles.container}>
@@ -62,8 +59,8 @@ class Login extends Component {
           </Text>
         </View>
         {!this.state.loggedIn && (
-          <View style={styles.container}>
-            <LoginButton
+          <View style={styles.buttons}>
+            <LoginButton 
               readPermissions={["public_profile"]}
               onLoginFinished={(error, result) => {
                 if (error) {
@@ -127,17 +124,21 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 2,
     borderWidth: 1,
-    borderRadius: 10
+    borderRadius: 10,
+    justifyContent:"center",
+    alignItems: "center",
   },
   body: {
-    backgroundColor: "#fafafa"
+    backgroundColor: "#fafafa",
+    height: "100%"
   },
   content: {
     justifyContent: "center",
     alignItems: "center"
   },
   avatar: {
-    marginLeft: 50
+    marginLeft: 0,
+    marginTop:30,
   },
   avatarImage: {
     borderRadius: 10,
@@ -156,9 +157,17 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
   buttons: {
-    justifyContent: "space-between",
-    flexDirection: "row",
-    margin: 20,
-    marginBottom: 30
+    margin: 30,
+    padding: 10,
+    backgroundColor: "#FFF",
+    borderColor: "#eff0f1",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    borderWidth: 1,
+    borderRadius: 10,
+    justifyContent:"center",
+    alignItems: "center",
   }
 });

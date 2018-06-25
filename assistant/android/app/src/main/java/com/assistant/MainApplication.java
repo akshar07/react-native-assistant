@@ -3,6 +3,7 @@ package com.assistant;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.reactnativenavigation.NavigationReactPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.reactnativenavigation.NavigationReactPackage;
@@ -43,6 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RCTCameraPackage(),
             new NavigationReactPackage(),
             new FBSDKPackage(),
             new NavigationReactPackage(),

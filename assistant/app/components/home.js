@@ -20,8 +20,9 @@ class Home extends Component {
         // <Login navigation={this.props.navigation}/>
         //<HomeScreen navigation={this.props.navigation}/>
         //  <NewsPref navigation={this.props.navigation}/>
+        //console.disableYellowBox = true;
         return (
-          <HomeScreen navigation={this.props.navigation}/>
+          <Login navigation={this.props.navigation}/>
         )
     }
 };
